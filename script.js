@@ -1,6 +1,10 @@
 let canvas = document.getElementById("tela")
 let context = canvas.getContext("2d")
 let btPausa = document.getElementById("btPausa")
+// let btUp = document.getElementById("btUp")
+// let btDown = document.getElementById("btDown")
+// let btLeft = document.getElementById("btLeft")
+// let btRight = document.getElementById("btRight")
 
 //Info sobre o tabuleiro
 let nx = 0 //Num de quadro de  X 
@@ -28,10 +32,11 @@ proxDirec.length = 0
 CriarTabuleiro()
 NovoJogo()
 
+
 let botaoAdicionarn = document.querySelector("#btNovo")
 botaoAdicionarn.addEventListener("click", function(event) {
     NovoJogo()
-
+   
     pausa()
 })
 
@@ -71,6 +76,7 @@ function NovoJogo() {
     btPausa.innerHTML = "Iniciar"
     btPausa.disable=false
     desenhar()
+   
 }
 
 function loopPrincipal() { 
@@ -176,6 +182,9 @@ function desenhar() {
   context.closePath()
   context.fill()
 
+
+
+
  
 }
 
@@ -190,7 +199,7 @@ proxDirec.push(desquerda)
  case 38: //cima
 //  nodos[0].direc = dcima;
 proxDirec.push(dcima)
- break;s
+ break;
  case 39: //direita
 //  nodos[0].direc = ddireita;
 proxDirec.push(ddireita)
@@ -201,6 +210,31 @@ proxDirec.push(dbaixo)
  break;
  }
 }
+
+let botaoCima = document.querySelector("#btUp")
+botaoCima.addEventListener("click", function(event) {
+    proxDirec.push(dcima)
+
+})
+
+let botaoBaixo = document.querySelector("#btDown")
+botaoBaixo.addEventListener("click", function(event) {
+    proxDirec.push(dbaixo)
+
+})
+
+let botaoEsquerda = document.querySelector("#btLeft")
+botaoEsquerda.addEventListener("click", function(event) {
+    proxDirec.push(desquerda)
+
+})
+
+let botaoDireita= document.querySelector("#btRight")
+botaoDireita.addEventListener("click", function(event) {
+    proxDirec.push(ddireita)
+
+})
+
 
 
 function novaPosFruta() { //Determinar uma nova posição para a fruta
@@ -219,5 +253,3 @@ function colisaoFruta() { //Verificar se posição da fruta colide com corpo da 
     }
     return false
    }
-
-

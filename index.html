@@ -5,6 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cobrinha</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/PSone.min.css">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"  rel="stylesheet"/>
     <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
     <style>@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");</style>
@@ -22,9 +23,15 @@
         <span>Pausar!</span>
     </label>
 </div>
-<p class="nes-text is-primary">Utilize as setas para jogar.</p>
-<br> 
-
+<p class="nes-text is-primary">Utilize as setas do teclado para jogar.</p>
+   
+    <div class="controle" style="margin-left: -530px">
+    
+        <button onClick="moveup()" class="icon arrow-up" id="btUp"></button><br>
+        <button onClick="moveleft()" class="icon arrow-left" id="btLeft"></button>
+        <button onClick="moveright()" class="icon arrow-right" id="btRight"></button><br>
+        <button onClick="movedown()" class="icon arrow-down" id="btDown"></button>
+    </div>
 
 
 
@@ -33,3 +40,6 @@
 </body>
 
 </html>
+
+    
+

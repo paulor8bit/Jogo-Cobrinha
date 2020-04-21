@@ -7,16 +7,23 @@
 body
 {
  background-color: #000000;
- height: 95vh;
- width: 95;
+
  align-items: center;
  display: flex; 
  justify-content: center;
  flex-direction: column;
 }
  
+
+.controle { 
+    text-align: center;
+
+    justify-content: start;
+
+    
+}
 .botoes { 
-    flex-direction: column;
+    flex-direction: row;
 }
 
 
