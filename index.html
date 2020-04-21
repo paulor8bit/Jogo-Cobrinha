@@ -5,10 +5,30 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cobrinha</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
-</head>
-<body>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"  rel="stylesheet"/>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <style>@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");</style>
     
+    
+    </head>
+<body>
+    <p class="nes-text is-primary"> Cobrinha, o game!  <i class="snes-logo"></i></p>
+    <canvas id = "tela" width=640 height=380></canvas>
+    <br>
+    <div class="botoes">
+    <button type="button" id="btNovo" class="nes-btn is-success">Novo Jogo</button>
+    <label>
+        <input type="radio" onClick="pausa()" class="nes-radio" id="btPausa" checked />
+        <span>Pausar!</span>
+    </label>
+</div>
+<p class="nes-text is-primary">Utilize as setar para jogar</p>
+
+
+
+
+    <script defer src='Nodo.js'></script>
+    <script defer src='script.js'></script>
 </body>
+
 </html>

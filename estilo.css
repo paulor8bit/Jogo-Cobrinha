@@ -1,0 +1,23 @@
+#tela
+{
+ background-color: #000000;
+ border-style: solid;
+ border-color: #888888;
+}
+body
+{
+ background-color: #000000;
+ height: 95vh;
+ width: 95;
+ align-items: center;
+ display: flex; 
+ justify-content: center;
+ flex-direction: column;
+}
+ 
+.botoes { 
+    flex-direction: column;
+}
+
+
+
