@@ -1,0 +1,16 @@
+{
+  "name": "cobrinha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scritp.js",
+  "scripts": {
+    "start": "http-server . -c-1",
+    "surge": "surge -p . -d cobrinha.surge.sh"
+  },
+  "author": "Paulo R",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.1",
+    "surge": "^0.21.3"
+  }
+}
